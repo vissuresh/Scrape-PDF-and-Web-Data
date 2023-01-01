@@ -1,7 +1,6 @@
 # Importing required modules
 import PyPDF2
 
-
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -9,12 +8,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 Options = webdriver.ChromeOptions()
 Options.add_experimental_option("detach", True)
-my_path = r"C:\Users\ksjun\OneDrive\Desktop\random\chromedriver.exe"
+my_path = r"<path-to>\chromedriver.exe"
 driver = webdriver.Chrome(options=Options,executable_path= my_path)
 
-
 # Creating a pdf file object
-pdfFileObj = open("C:\\Users\\ksjun\\OneDrive\\Desktop\\random\\lb450.pdf",'rb')
+pdfFileObj = open("<path-to>\lb450.pdf",'rb')
 
 # Creating a pdf reader object
 pdfReader = PyPDF2.PdfReader(pdfFileObj)
@@ -116,5 +114,3 @@ for num in range(len(link_list)):
     my_file=[]
 
 newfile.close()
-        
-        
